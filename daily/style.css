@@ -1,0 +1,71 @@
+.main {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  background-color: rgb(211, 211, 211);
+}
+.daily__body,
+.daily__html {
+  height: 100%;
+  margin: 0;
+}
+
+.daily__body {
+  background-color: #e3e3e3; /* 배경 색상을 원하는 색상으로 지정하세요 */
+}
+
+.TODooList {
+  text-align: center;
+}
+input[type="text"] {
+  width: 385px;
+  height: 30px;
+  outline: 0;
+  border: none;
+  font-size: 1.5em;
+  background: white;
+  margin-right: 10px;
+  padding: 5px;
+}
+#newTodo {
+  margin-bottom: 10px;
+}
+.daily__button {
+  width: 80px;
+  height: 35px;
+  font-size: 20px;
+  background-color: #313535;
+  border-radius: 4px;
+  outline: 0;
+  color: white;
+}
+.todolist {
+  background-color: white;
+  margin-top: 20px;
+  padding: 10px 40px 10px 0px;
+}
+ul {
+  list-style: none;
+}
+li {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 1.3em;
+}
+.daily__a {
+  float: right;
+  text-align: right;
+  color: red;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.delete {
+  background-color: red;
+  text-align: center;
+  padding: 0px 4px 0px 4px;
+  color: white;
+  cursor: pointer;
+}

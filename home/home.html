@@ -1,44 +1,52 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>오늘 뭐 하지?</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Header -->
     <header class="header">
-        <img class="header__logo" src="../images/logo.png" alt="logo">
-        <nav class="header__nav">
-            <ul class="header__menu">
-                <li><a class="header__menu__item active" href="#home">HOME</a></li>
-                <li><a class="header__menu__item" href="#monthly">MONTHLY</a></li>
-                <li><a class="header__menu__item" href="#weekly">WEEKLY</a></li>
-                <li><a class="header__menu__item" href="#daily">DAILY</a></li>
-            </ul>
-        </nav>
+      <img class="header__logo" src="../images/logo.png" alt="logo" />
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a class="header__menu__item active" href="#home">HOME</a></li>
+          <li><a class="header__menu__item" href="#monthly">MONTHLY</a></li>
+          <li><a class="header__menu__item" href="#weekly">WEEKLY</a></li>
+          <li><a class="header__menu__item" href="#daily">DAILY</a></li>
+        </ul>
+      </nav>
     </header>
     <!-- Main -->
     <main id="main">
-        <section id="home">
-            <div class="home__container">
-                <h1 class="home__title">플래너 이름</h1>
-                <h3 class="home__description">플래너 소개</h3>
-                <a class="home__news" href="#">오늘의 뉴스</a>
-                <a class="home__food" href="#">오늘 뭐 먹지</a>
-            </div>
-        </section>
+      <!-- 페이지 제목 -->
+      <h1 class="TODooList">To Do List</h1>
+      <!-- 할 일을 추가하는 폼
+        서버 측 스크립트가  위치한 페이지를 지정하는 부분
+        사용자가 폼에 어떤 내용을 입력하고 제출하면, 이 데이터는 index.html 페이지로 전송됨
+       -->
+      <form action="index.html" method="post" onsubmit="return addTask(event)">
+        <!-- 할 일을 입력하는 텍스트 상자 -->
+        <input type="text" placeholder="새로운 할 일" id="newTodo" />
+        <!-- 할 일을 추가하는 버튼 -->
+        <button type="submit" class="daily__button"><b>추가</b></button>
+      </form>
+      <!-- 할 일 목록을 보여주는 컨테이너 -->
+      <div class="todolist">
+        <!-- 할 일 목록을 표시하는 목록 요소 -->
+        <ul id="todoList"></ul>
+        <!-- 모든 할 일을 삭제하는 링크 -->
+        <a id="clear" class="daily__a" onclick="clearTodoList()">모두 삭제</a>
     </main>
     <!-- Footer -->
     <footer id="footer" class="section">
-        <div class="max-container">
-            <p class="wise">명 언</p>
-        </div>
+      <div class="max-container">
+        <p class="wise">명 언</p>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
