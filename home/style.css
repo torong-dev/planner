@@ -4,6 +4,7 @@
   --color-red: #e8344f;
   --color-white: #fffafa;
   --color-black: #212121;
+  --color-text: #212121;
 
   /* Font size */
   --font-xlarge: 92px;
@@ -37,6 +38,11 @@
 /* Universal tags */
 * {
   box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 html {
@@ -164,7 +170,7 @@ button:focus {
 
 .home__container {
   position: relative;
-  height: 640px;
+  height: 100%;
 }
 
 .home__title {
@@ -173,8 +179,8 @@ button:focus {
 }
 
 .home__description {
-  font-size: var(--font-medium);
-  margin: 80px 0px 70px 0px;
+  font-size: var(--font-regular);
+  margin-top: 250px;
 }
 
 .home__news,
@@ -198,7 +204,11 @@ button:focus {
 #footer {
   background-color: var(--color-black);
   color: var(--color-white);
-  padding: 2rem;
+  padding: 1rem;
+}
+
+.quote {
+  maring-top: 2px;
 }
 
 /* daily css */
