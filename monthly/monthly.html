@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>오늘 뭐 하지?</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- JS -->
+  <script defer src="./calender.js"></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <img class="header__logo" src="../images/logo.png" alt="logo">
+    <nav class="header__nav">
+      <ul class="header__menu">
+        <li><a class="header__menu__item active" href="#home">HOME</a></li>
+        <li><a class="header__menu__item" href="#monthly">MONTHLY</a></li>
+        <li><a class="header__menu__item" href="#weekly">WEEKLY</a></li>
+        <li><a class="header__menu__item" href="#daily">DAILY</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main id="main">
+    <section id="home">
+      <div class="home__container">
+
+        <!-- GOAL -->
+        <div class="goal__container">
+          <ul>
+            <li>
+              <input id class="goal-input" type="text" placeholder="월간 목표">
+              <button onclick="addItem()">추가</button>
+              <button >완료</button>
+            </li>
+            <li>
+              <input class="goal-input" type="text" placeholder="월간 목표">
+              <button class="goal__addBtn2">추가</button>
+              <button class="goal__delBtn2">완료</button></li>
+            <li>
+              <input class="goal-input" type="text" placeholder="월간 목표">
+              <button class="goal__addBtn3">추가</button>
+              <button class="goal__delBtn3">완료</button></li>
+          </ul>
+        </div>
+
+        <!-- CALENDAR -->
+        <div class="calendar__container">
+          <div class="calendar">
+            <div class="calendar__header">
+              <div class="calendar__year-month"></div>
+              <div class="nav">
+                <button class="calendar__nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+                <button class="calendar__nav-btn go-today" onclick="goToday()">Today</button>
+                <button class="calendar__nav-btn go-next" onclick="nextMonth()">&gt;</button>
+              </div>
+            </div>
+            <div class="calendar__calendar-main">
+              <div class="calendar__days">
+                <div class="calendar__day">일</div>
+                <div class="calendar__day">월</div>
+                <div class="calendar__day">화</div>
+                <div class="calendar__day">수</div>
+                <div class="calendar__day">목</div>
+                <div class="calendar__day">금</div>
+                <div class="calendar__day">토</div>
+              </div>
+              <div class="calendar__dates"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="section">
+    <div class="max-container">
+      <p class="wise">명 언</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
