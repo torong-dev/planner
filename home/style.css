@@ -210,5 +210,6 @@ button:focus {
 }
 
 .quote {
+  text-align: center;
   margin-top: 2px;
 }
