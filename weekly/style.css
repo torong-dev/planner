@@ -54,6 +54,7 @@ body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
 }
+
 /* 
 h1,
 h2,
@@ -177,13 +178,14 @@ a {
 
 .goal__control {
 
-    width: 810px;
+    width: 790px;
     height: 50px;
     border: none;
     border-bottom: 1px solid rgb(88, 88, 88);
     font-size: 30px;
     text-align: center;
     font-weight: 700;
+    margin-left: 80px;
 }
 
 table {
@@ -196,7 +198,7 @@ th {
 }
 
 .text__primary {
-    color: rgb(222, 133, 44);
+    color: rgb(255, 150, 45);
 }
 
 .text__danger {
@@ -219,10 +221,24 @@ td {
 
 .input__group__ch {
     display: flex;
-    flex-wrap: nowrap;
-    margin: 1px;
-    padding: 1px;
-    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.form__control__ch {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+    width: 700px;
+    height: 38px;
+    border: 1px solid rgb(88, 88, 88);
+    border-radius: 3px;
+    padding-left: 8px;
+    margin-right: 10px;
+
 }
 
 .input__group__prepend {
@@ -257,6 +273,44 @@ td {
     color: rgb(88, 88, 88);
 
     font-weight: 700;
+}
+
+.input__group__text__goal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: white;
+    border: none;
+    text-align: center;
+    margin-right: 0px;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    color: rgb(255, 150, 45);
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.input__group__text__goals {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: white;
+    border: none;
+    text-align: center;
+    margin-right: 0px;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    color: rgb(255, 94, 0);
+
+    font-weight: 700;
+    cursor: pointer;
 }
 
 .form__control {
@@ -300,6 +354,20 @@ td {
 .to__do {
     margin: 10px 0px;
     font-size: 20px;
+}
+
+/* Footer */
+#footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 1rem;
+}
+
+.quote {
+    margin-top: 2px;
+}
+.main {
+    margin-bottom: 14px;
 }
 
 /* 달력폼 */

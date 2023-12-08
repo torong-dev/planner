@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEEKLY PLANNER</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="module" src="../home/quote.js" defer></script>
 </head>
 
 <body>
@@ -23,6 +24,9 @@
         </header>
     </div>
 
+
+
+
     <!-- <input type="text" id="timeTable" name="username" placeholder="시간을 적어주세요!">
     <input type="text" id="goalTable" name="username" placeholder="목표를 적어주세요!">
     <button onclick="save()">입력</button>
@@ -32,7 +36,11 @@
     <div class=container>
         <div class='title'>
             <h1>WEEKLY PLANNER</h1>
-            <input id="goal" class="goal__control" type="text" placeholder="목표를 입력하세요">
+            <div class="input__group__prepend">
+                <input id="goal" class="goal__control" type="text" placeholder="목표를 입력하세요">
+                <button onclick="fixed__goal()" class="input__group__text__goal">o</button>
+                <button onclick="unFixed__goal()" class="input__group__text__goals">x</button>
+            </div>
         </div>
         <div class="input__group">
             <div class="input__group__prepend">
@@ -50,9 +58,9 @@
         </div>
         <div id="edit" class="input__group__ch">
             <div class="input__group__prepend">
-                <span class="input__group__text">변경사항</span>
+                <span class="input__group__text">수정</span>
             </div>
-            <input id="rdit__list" class="form__control" type="text" placeholder="변경사항을 입력하세요">
+            <input id="rdit__list" class="form__control__ch" type="text" placeholder="변경사항을 입력하세요">
             <button type="button" class="btn" onclick="schedule__edit()">변경</button>
         </div>
     </div>
@@ -81,6 +89,12 @@
         </div>
     </div>
 
+    <footer id="footer">
+        <div class="quote">
+            <!-- 여기에 푸터 내용이 들어갈 수 있습니다. -->
+        </div>
+    </footer>
+
     <!-- <div class="calendar">
             <div class="header">
                 <div class="year-month"></div>
@@ -105,6 +119,7 @@
             </div> -->
     <!-- <script src="m.js"></script> -->
     <script src="weekly.js"></script>
+    <script src="quote.js"></script>
     <!-- <script src="w.js"></script> -->
 </body>
 

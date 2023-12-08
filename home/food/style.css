@@ -211,28 +211,32 @@ button:focus {
   margin: 30px;
 }
 
+.menu_button {
+  width: 180px;
+  height: 45;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.menu_button:hover {
+  width: 185px;
+  height:48px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
 .menu_box {
   background-color: rgb(41, 38, 38);
   color: white;
   font-size: 10px;
-  width: 250px;
-  height: 400;
+  width: 230px;
+  height: 345px;
   padding: 20px;
   border: none;
   border-radius: 10px;
   margin: 5px;
-}
-
-.menu_box:hover {
-  background-color: rgb(41, 38, 38);
-  color: white;
-  font-size: 10px;
-  width: 255px;
-  height: 405;
-  padding: 20px;
-  border: none;
-  border-radius: 10px;
-  margin: 7px;
 }
 
 .menu_title {
