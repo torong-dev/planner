@@ -40,7 +40,6 @@ function checkToDo(e) {
     todoLabel.style.color = "#000000";
   }
 }
-
 // 할 일 목록을 전체 삭제하는 함수
 function clearTodoList(e) {
   // 할 일 목록의 내용을 모두 비워줌
