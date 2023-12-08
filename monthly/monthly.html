@@ -8,7 +8,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
   <!-- JS -->
-  <script defer src="./calender.js"></script>
+  <script defer src="./calendar.js"></script>
   <script defer src="./monthylGoal.js"></script>
   <script defer src="../home/quote.js"></script>
 </head>
@@ -55,28 +55,28 @@
         </div>
 
         <!-- CALENDAR -->
-        <div class="calendar__container">
-          <div class="calendar">
-            <div class="calendar__header">
-              <div class="calendar__year-month"></div>
-              <div class="nav">
-                <button class="calendar__nav-btn go-prev" onclick="prevMonth()">&lt;</button>
-                <button class="calendar__nav-btn go-today" onclick="goToday()">Today</button>
-                <button class="calendar__nav-btn go-next" onclick="nextMonth()">&gt;</button>
-              </div>
-            </div>
-            <div class="calendar__calendar-main">
-              <div class="calendar__days">
-                <div class="calendar__day">일</div>
-                <div class="calendar__day">월</div>
-                <div class="calendar__day">화</div>
-                <div class="calendar__day">수</div>
-                <div class="calendar__day">목</div>
-                <div class="calendar__day">금</div>
-                <div class="calendar__day">토</div>
-              </div>
-              <div class="calendar__dates"></div>
-            </div>
+        <div id="calendar-container">
+          <div id="calendar__currentMonth"></div>
+          <table id="calendar">
+            <thead>
+              <tr>
+                <th>일</th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+                <th class="calendar__saturday">토</th>
+              </tr>
+            </thead>
+            <tbody id="calendar-body">
+              <!-- 달력 내용은 JavaScript에서 동적으로 생성됩니다. -->
+            </tbody>
+          </table>
+          <div id="calendar__memo">
+            <textarea id="memoText" placeholder="메모를 입력하세요"></textarea>
+            <button id="calendar__saveBtn">저장</button>
+            <button id="calendar__closeBtn">닫기</button>
           </div>
         </div>
 
