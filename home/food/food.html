@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- Javascript -->
     <script src="food.js"></script>
+    <script src="../quote.js"></script>
+
 </head>
 
 <body>
@@ -26,50 +28,67 @@
     </header>
 
     <!-- Main -->
-    <main id="main">
-        <section id="home">
-            <div class="home__container">
-                <h1 class="home__title">오늘 뭐 먹지?</h1>
-                <div>
-                    <p>
-                        <br>
-                        오늘 뭐 먹을지 고민이신 분이 있으신가요?
-                        <br><br>
-                        당신의 아침 - 점심 - 저녁식사는
-                        <br>
-                        '오늘 뭐 먹지?'가 추천해드리겠습니다.
-                    </p>
-                </div>
 
-                <div class="menu-container">
-                    <div class="menu" id="아침메뉴">
-                        <h2>아침 메뉴</h2>
-                        <img id="아침이미지" src="https://www.themealdb.com/images/media/meals/1548772327.jpg" alt="">
-                        <button onclick="추천('아침')">아침 메뉴 추천</button>
+    <body data-bs-theme="dark">
+        <div class="background-banner">
+            <main id="main">
+                <section id="home">
+                    <div class="home__container">
+                        <div class="px-4 py-5 my-5 text-center">
+                            <h1 class="home__title">오늘 뭐 먹지?</h1>
+                            <div class="col-lg-6 mx-auto">
+                                <p class="home__small_title">
+                                    <br>
+                                    오늘 뭐 먹을지 고민이신 분!
+                                    <br><br>
+                                    스파르타한 삶을 사는 당신을 위해
+                                    <br class="home__small_title3">
+                                    아침, 점심, 저녁식사를 추천해드리겠습니다.
+                                </p>
+                                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-container">
+                            <div class="menu_box">
+                                <div class="menu_title">
+                                    <h2 id="MorningTitle">breakfast</h2>
+                                </div>
+                                <img id="Morning"
+                                    src="https://www.themealdb.com/images/media/meals/utxqpt1511639216.jpg" alt="">
+                                <button onclick="morning()">아침 메뉴 추천</button>
+                            </div>
+
+                            <div class="menu_box" id="점심메뉴">
+                                <div class="menu_title">
+                                    <h2 id="LunchTitle">lunch</h2>
+                                </div>
+                                <img id="Lunch" src="https://www.themealdb.com/images/media/meals/wqqvyq1511179730.jpg"
+                                    alt="">
+                                <button onclick="lunch()">점심 메뉴 추천</button>
+                            </div>
+
+                            <div class="menu_box" id="저녁메뉴">
+                                <div class="menu_title">
+                                    <h2 id="DinnerTitle">dinner</h2>
+                                </div>
+                                <img id="Dinner" src="https://www.themealdb.com/images/media/meals/xxyupu1468262513.jpg"
+                                    alt="">
+                                <button onclick="dinner()">저녁 메뉴 추천</button>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="menu" id="점심메뉴">
-                        <h2>점심 메뉴</h2>
-                        <img id="점심이미지" src="https://www.themealdb.com/images/media/meals/wqqvyq1511179730.jpg" alt="">
-                        <button onclick="추천('점심')">점심 메뉴 추천</button>
-                    </div>
-
-                    <div class="menu" id="저녁메뉴">
-                        <h2>저녁 메뉴</h2>
-                        <img id="저녁이미지" src="https://www.themealdb.com/images/media/meals/2dsltq1560461468.jpg" alt="">
-                        <button onclick="추천('저녁')">저녁 메뉴 추천</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer id="footer" class="section">
-        <div class="max-container">
-            <p class="wise">명 언</p>
+                </section>
+            </main>
         </div>
-    </footer>
-</body>
+
+        <!-- Footer -->
+        <footer id="footer" class="section">
+            <div class="max-container">
+                <p class="quote" id="quote"></p>
+            </div>
+        </footer>
+    </body>
 
 </html>

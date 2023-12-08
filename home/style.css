@@ -30,6 +30,7 @@
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-translucent-black);
   border-radius: var(--size-border-radius);
@@ -208,7 +209,7 @@ button:focus {
 }
 
 .quote {
-  maring-top: 2px;
+  margin-top: 2px;
 }
 
 /* daily css */
@@ -221,6 +222,7 @@ button:focus {
   margin: auto;
   background-color: rgb(211, 211, 211);
 }
+
 .daily__body,
 .daily__html {
   height: 100%;
@@ -228,12 +230,14 @@ button:focus {
 }
 
 .daily__body {
-  background-color: #e3e3e3; /* 배경 색상을 원하는 색상으로 지정하세요 */
+  background-color: #e3e3e3;
+  /* 배경 색상을 원하는 색상으로 지정하세요 */
 }
 
 .TODooList {
   text-align: center;
 }
+
 input[type="text"] {
   width: 385px;
   height: 30px;
@@ -244,9 +248,11 @@ input[type="text"] {
   margin-right: 10px;
   padding: 5px;
 }
+
 #newTodo {
   margin-bottom: 10px;
 }
+
 .daily__button {
   width: 80px;
   height: 35px;
@@ -256,20 +262,24 @@ input[type="text"] {
   outline: 0;
   color: white;
 }
+
 .todolist {
   background-color: white;
   margin-top: 20px;
   padding: 10px 40px 10px 0px;
 }
+
 ul {
   list-style: none;
 }
+
 li {
   border-bottom: 1px solid lightgrey;
   padding-bottom: 15px;
   padding-top: 15px;
   font-size: 1.3em;
 }
+
 .daily__a {
   float: right;
   text-align: right;
@@ -277,6 +287,7 @@ li {
   font-size: 1.2em;
   cursor: pointer;
 }
+
 .delete {
   background-color: red;
   text-align: center;
