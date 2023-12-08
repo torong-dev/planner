@@ -49,6 +49,7 @@ function clearTodoList(e) {
 
 // 새로운 할 일을 추가하는 함수
 function addToDo(e) {
+  e.preventDefault();
   // 입력한 할 일의 값을 가져옴
   let toDoValue = document.querySelector("input");
   // 입력값이 비어있지 않은 경우, addTask 함수를 호출하여 목록에 추가
@@ -63,7 +64,7 @@ function addTask(value) {
     // 입력값이 비어있지 않은 경우, 목록에 새로운 할 일을 추가
     let ul = document.getElementById("daily__list");
     let li = document.createElement("li");
-    li.innerHTML = `<span class="delete" onclick="deleteToDo(event)">x</span><input type="checkbox" onclick="checkToDo(event)"><label>${toDoValue}</label>`;
+    li.innerHTML = `<span class="delete" style="color: red;"onclick="deleteToDo(event)">x</span><input type="checkbox" onclick="checkToDo(event)"><label>${toDoValue}</label>`;
     ul.appendChild(li);
     // document.querySelector(".daily__list").style.display = "block";
     document.getElementById("daily__new__todo").value = ""; // 입력 창을 비워줌

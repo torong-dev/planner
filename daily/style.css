@@ -10,6 +10,7 @@
 .daily__html {
   height: 100%;
   margin: 0;
+  padding-top: 750px;
 }
 
 /* .daily__body {
@@ -44,8 +45,7 @@ input[type="text"] {
   color: white;
 }
 
-.da .daily__container {
-  background-color: white;
+.daily__container {
   margin-top: 20px;
   padding: 10px 40px 10px 0px;
 }
