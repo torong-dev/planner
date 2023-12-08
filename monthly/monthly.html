@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="style.css">
   <!-- JS -->
   <script defer src="./calender.js"></script>
+  <script defer src="./monthylGoal.js"></script>
+  <script defer src="../home/quote.js"></script>
 </head>
 
 <body>
@@ -35,18 +37,20 @@
         <div class="goal__container">
           <ul>
             <li>
-              <input id class="goal-input" type="text" placeholder="월간 목표">
-              <button onclick="addItem()">추가</button>
-              <button >완료</button>
+              <input id="goal-input1" class="goal-input" type="text" placeholder="월간 목표">
+              <button onclick="addItem('goal-input1')">추가</button>
+              <button onclick="doneItem('goal-input1')">완료</button>
             </li>
             <li>
-              <input class="goal-input" type="text" placeholder="월간 목표">
-              <button class="goal__addBtn2">추가</button>
-              <button class="goal__delBtn2">완료</button></li>
+              <input id="goal-input2" class="goal-input" type="text" placeholder="월간 목표">
+              <button onclick="addItem('goal-input2')">추가</button>
+              <button onclick="doneItem('goal-input2')">완료</button>
+            </li>
             <li>
-              <input class="goal-input" type="text" placeholder="월간 목표">
-              <button class="goal__addBtn3">추가</button>
-              <button class="goal__delBtn3">완료</button></li>
+              <input id="goal-input3" class="goal-input" type="text" placeholder="월간 목표">
+              <button onclick="addItem('goal-input3')">추가</button>
+              <button onclick="doneItem('goal-input3')">완료</button>
+            </li>
           </ul>
         </div>
 
@@ -83,10 +87,9 @@
   <!-- Footer -->
   <footer id="footer" class="section">
     <div class="max-container">
-      <p class="wise">명 언</p>
+      <p class="quote" id="quote"></p>
     </div>
   </footer>
-
 </body>
 
 </html>

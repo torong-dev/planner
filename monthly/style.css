@@ -195,6 +195,10 @@ button:focus {
   font-size: 25px;
   cursor: pointer;
 }
+.home__container > .goal__container > ul > li > .input-disabled {
+  background-color: lightgray;
+  cursor: pointer;
+}
 
 .home__container > .goal__container > ul > li > input:focus {
   outline: none;

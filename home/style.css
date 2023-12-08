@@ -31,6 +31,7 @@
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-translucent-black);
   border-radius: var(--size-border-radius);

@@ -1,45 +1,54 @@
-//현재 한국 시간
-var time = new Date()
-var utc = time.getTime() + (time.getTimezoneOffset() * 60 * 1000); //현재 컴퓨터 설정 시간에 utc 한국 시간차이 -540
-var krTime = 9 * 60 * 60 * 1000
-var korea = new Date(utc + krTime);
-// console.log(korea);
-var dayText = ["일", "월", "화", "수", "목", "금", "토"]
+// var edittodo;
 
-var year = korea.getFullYear(); // 년도
-var month = korea.getMonth() + 1; // 월
-var date = korea.getDate(); // 일
-
-var dayN = korea.getDay(); // 요일
-var day = dayText[dayN];
-
-var KoreaTime = `${year}.${month}.${date}.${day}`
-
-function save() {
-    document.getElementById('goal').style.textDecoration = 'none';
-
-    // 입력란의 값을 가져옴
-    var timetData = document.getElementById('timeTable').value;
-    var goaltData = document.getElementById('goalTable').value;
-
-    // 로컬 저장소에 데이터 저장
-    localStorage.setItem(timetData, goaltData);
-
-    // 저장 데이터 가져오기
-    var gData = localStorage.getItem(timetData);
-
-    // 저장 데이터 불러오기
-    document.getElementById('goal').append(...gData);
+function schedule__insert() {
+    var inputValue = document.getElementById('day').value;
+    var num = parseInt(inputValue, 10);
+    if (!isNaN(num)) {
+        num -= 1; // 1을 빼기
+        // num 변수를 사용하거나 처리할 로직을 여기에 추가
+        var todos = document.getElementsByClassName("todo");
+        var targetTodoChildren = todos[num].children[num]
+        targetTodoChildren.insertAdjacentHTML('afterbegin',"<div class='parent'><div id='to__do' class='to__do'>" + document.getElementById("toDo").value + "</div><div class='btn__group'><button type='button' class='btn' onclick='edit(this)'>수정</button><button type='button' class='btn' onclick='schedule__remove()'>삭제</button></div></div>");
+    } 
+    else {
+        alert("입력된 값이 유효한 숫자가 아닙니다.");
+    }
 }
 
-function cancel() {
-    document.getElementById('goal').style.textDecoration = 'none';
-    localStorage.clear();
-    document.getElementById('goal').textContent = '';
+// function schedule__removeAll() {
+//     var toDoElement = document.getElementById("to__do");
+//     var parentElement = toDoElement.parentNode;
+//     parentElement.remove();
+// }
+
+function schedule__remove() {
+    var toDoElement = document.getElementById("to__do");
+    var parentElement = toDoElement.parentNode;
+    parentElement.remove();
 }
 
-function finish() {
-    document.getElementById('goal').style.textDecoration = 'line-through';
-}
+// function edit(ths) {
+//     var editElement = document.getElementById("edit");
+//     if (editElement.classList.contains("d__none")) {
+//         editElement.classList.remove("d__none");
+//         edittodo = ths;
+//         var editListInput = document.getElementById("edit__list");
+//         var textToSet = edittodo.parentElement.parentElement.querySelector('.parent > .to__do').textContent;
+//         editListInput.value = textToSet;
+//     }
+//     else {
+//         var editElement = document.getElementById("edit");
+//         editElement.classList.add("d__none");
+//     }
+// }
+
+// function schedule__edit() {
+//     var editListInputValue = document.getElementById("edit__list").value;
+//     var toDoElement = edittodo.parentElement.parentElement.querySelector('.parent > .to__do');
+//     toDoElement.textContent = editListInputValue;
+
+//     var editElement = document.getElementById("edit");
+//     editElement.classList.add("d__none");
+// }
 
 
