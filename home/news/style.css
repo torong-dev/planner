@@ -185,7 +185,7 @@ button:focus {
   border: 2px solid var(--color-red);
   border-radius: 30px;
   transform: translate(-50%, -50%);
-  transition: all var(--animation-duration) ease;
+  transition: all 500ms ease;
 }
 
 .news__search__box:hover {
@@ -203,7 +203,7 @@ button:focus {
   float: left;
   font-size: 1.5rem;
   line-height: 30px;
-  transition: all var(--);
+  transition: all 500ms ease;
 }
 
 .news__search__btn {

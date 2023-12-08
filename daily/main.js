@@ -64,15 +64,15 @@ function addTask(event) {
   // 새로운 할 일을 추가하는 함수
   event.preventDefault(); // 폼 제출을 막음
 
-  let toDoValue = document.getElementById("newTodo").value;
+  let toDoValue = document.getElementById("daily__new__todo").value;
   if (toDoValue !== "") {
     // 입력값이 비어있지 않은 경우, 목록에 새로운 할 일을 추가
-    let ul = document.getElementById("todoList");
+    let ul = document.getElementById("daily__list");
     let li = document.createElement("li");
     li.innerHTML = `<span class="delete" onclick="deleteToDo(event)">x</span><input type="checkbox" onclick="checkToDo(event)"><label>${toDoValue}</label>`;
     ul.appendChild(li);
-    document.querySelector(".todolist").style.display = "block";
-    document.getElementById("newTodo").value = ""; // 입력 창을 비워줌
+    document.querySelector(".daily__list").style.display = "block";
+    document.getElementById("daily__new__todo").value = ""; // 입력 창을 비워줌
   }
 
   return false; // 폼 제출을 방지
