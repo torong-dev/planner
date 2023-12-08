@@ -43,14 +43,12 @@ function checkToDo(e) {
 // 할 일 목록을 전체 삭제하는 함수
 function clearTodoList(e) {
   // 할 일 목록의 내용을 모두 비워줌
-  let ul = (document.querySelector("ul").innerHTML =
-    "사용자에 의해 삭제되었습니다.");
+  let ul = document.getElementById("daily__list");
+  ul.innerHTML = ""; // ul의 innerHTML을 비워주도록 수정
 }
 
 // 새로운 할 일을 추가하는 함수
 function addToDo(e) {
-  // 폼 제출을 막습니다.
-  e.preventDefault();
   // 입력한 할 일의 값을 가져옴
   let toDoValue = document.querySelector("input");
   // 입력값이 비어있지 않은 경우, addTask 함수를 호출하여 목록에 추가
@@ -59,10 +57,7 @@ function addToDo(e) {
   toDoValue.value = "";
 }
 
-function addTask(event) {
-  // 새로운 할 일을 추가하는 함수
-  event.preventDefault(); // 폼 제출을 막음
-
+function addTask(value) {
   let toDoValue = document.getElementById("daily__new__todo").value;
   if (toDoValue !== "") {
     // 입력값이 비어있지 않은 경우, 목록에 새로운 할 일을 추가
@@ -70,7 +65,7 @@ function addTask(event) {
     let li = document.createElement("li");
     li.innerHTML = `<span class="delete" onclick="deleteToDo(event)">x</span><input type="checkbox" onclick="checkToDo(event)"><label>${toDoValue}</label>`;
     ul.appendChild(li);
-    document.querySelector(".daily__list").style.display = "block";
+    // document.querySelector(".daily__list").style.display = "block";
     document.getElementById("daily__new__todo").value = ""; // 입력 창을 비워줌
   }
 
