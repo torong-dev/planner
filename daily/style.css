@@ -1,24 +1,24 @@
-.main {
+.daily__main {
   width: 500px;
+  height: 750px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: auto;
-  background-color: rgb(211, 211, 211);
 }
-.daily__body,
+
 .daily__html {
   height: 100%;
   margin: 0;
 }
 
-.daily__body {
+/* .daily__body {
   background-color: #e3e3e3; /* 배경 색상을 원하는 색상으로 지정하세요 */
-}
 
-.TODooList {
+.daily__todolist {
   text-align: center;
 }
+
 input[type="text"] {
   width: 385px;
   height: 30px;
@@ -29,9 +29,11 @@ input[type="text"] {
   margin-right: 10px;
   padding: 5px;
 }
-#newTodo {
+
+#daily__new__todo {
   margin-bottom: 10px;
 }
+
 .daily__button {
   width: 80px;
   height: 35px;
@@ -41,31 +43,187 @@ input[type="text"] {
   outline: 0;
   color: white;
 }
-.todolist {
+
+.da .daily__container {
   background-color: white;
   margin-top: 20px;
   padding: 10px 40px 10px 0px;
 }
-ul {
-  list-style: none;
-}
-li {
-  border-bottom: 1px solid lightgrey;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  font-size: 1.3em;
-}
+
 .daily__a {
   float: right;
   text-align: right;
   color: red;
   font-size: 1.2em;
   cursor: pointer;
+  margin-top: 10px;
+  margin-right: 13px;
 }
-.delete {
-  background-color: red;
+
+/* Home style.css */
+/* Global */
+:root {
+  /* Color */
+  --color-red: #e8344f;
+  --color-white: #fffafa;
+  --color-black: #212121;
+
+  /* Font size */
+  --font-xlarge: 92px;
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-max-width: 1200px;
+  --size-border-radius: 4px;
+
+  /* Annimation */
+  --animation-duration: 250ms;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-translucent-black);
+  border-radius: var(--size-border-radius);
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+button {
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+}
+
+button:focus {
+  outline: 1px solid transparent;
+}
+
+/* Common */
+.section {
   text-align: center;
-  padding: 0px 4px 0px 4px;
-  color: white;
-  cursor: pointer;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+/* Header */
+.header {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: all 300ms ease;
+}
+
+.header__logo {
+  width: 80px;
+  height: 80px;
+}
+
+.header__toggle {
+  display: none;
+  color: var(--color-white);
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1.3rem;
+  right: 1rem;
+}
+
+.header__menu {
+  display: flex;
+  gap: 4px;
+}
+
+.header__menu__item {
+  display: block;
+  text-align: center;
+  width: 110px;
+  padding: 8px 16px;
+  margin: 0px 50px 0px 50px;
+  font-weight: var(--weight-bold);
+  border-radius: var(--size-border-radius);
+}
+
+.header__menu__item:hover {
+  transform: scale(1.2);
+  background-color: var(--color-red);
+  color: var(--color-white);
+  transition: all var(--animation-duration);
+}
+
+.header__menu__item.active {
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.max-container {
+  max-width: var(--size-max-width);
+  margin: auto;
+}
+
+/* Daily */
+#daily {
+  position: relative;
+  color: var(--color-text);
+  text-align: center;
+}
+
+/* Footer */
+#footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 1rem;
 }
