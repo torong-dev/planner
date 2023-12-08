@@ -1,22 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="ws.css" />
-    <script src="ws.js"></script>
+    <title>WEEKLY PLANNER</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
-        <input type="text" id="timeTable" name="username" placeholder="시간을 적어주세요!">
-        <input type="text" id="goalTable" name="username" placeholder="목표를 적어주세요!">
-        <button onclick="save()">저장</button>
-        <button onclick="cancel()">삭제</button>
-        <button onclick="finish()">완료</button>
+<div>
+    <header class="header">
+        <img class="header__logo" src="../images/logo.png" alt="logo">
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li><a class="header__menu__item active" href="#home">HOME</a></li>
+                <li><a class="header__menu__item" href="../monthly/monthly.html">MONTHLY</a></li>
+                <li><a class="header__menu__item" href="../weekly/weekly.html">WEEKLY</a></li>
+                <li><a class="header__menu__item" href="../daily//daily.html">DAILY</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
 
-        <div id= "goal">
+
+
+
+    <!-- <input type="text" id="timeTable" name="username" placeholder="시간을 적어주세요!">
+    <input type="text" id="goalTable" name="username" placeholder="목표를 적어주세요!">
+    <button onclick="save()">입력</button>
+    <button onclick="cancel()">삭제</button>
+    <button onclick="finish()">완료</button> -->
+
+    <div class=container>
+        <div class='title'>
+            <h1>WEEKLY PLANNER</h1>
+            <input id="goal" class="goal__control" type="text" placeholder="목표를 입력하세요">
         </div>
+        <div class="input__group">
+            <div class="input__group__prepend">
+                <div class="input__group__text">요일</div>
+                <input id="day" class="form__control" type="text" placeholder="요일에 해당하는 숫자를 입력하세요">
+            </div>
+            <div class="input__group__prepend">
+                <div class="input__group__text">할일</div>
+                <input id="toDo" type="text" class="form__control" placeholder="목표를 위한 일을 입력하세요">
+            </div>
+            <div class="btn__group">
+                <button type="button" class="btn" onclick="schedule__insert()">입력</button>
+                <button type="button" class="btn" onclick="schedule__removeAll()">모두삭제</button>
+            </div>
+        </div>
+        <div id="edit" class="input__group__ch">
+            <div class="input__group__prepend">
+                <span class="input__group__text">변경사항</span>
+            </div>
+            <input id="rdit__list" class="form__control" type="text" placeholder="변경사항을 입력하세요">
+            <button type="button" class="btn" onclick="schedule__edit()">변경</button>
+        </div>
+    </div>
+    <div class="main">
+        <div class="list">
+            <table class="table">
+                <thead>
+                    <th>Monday(1)</th>
+                    <th>Tuesday(2)</th>
+                    <th>Wednesday(3)</th>
+                    <th>Thursday(4)</th>
+                    <th>Friday(5)</th>
+                    <th class="text__primary">Saturday(6)</th>
+                    <th class="text__danger">Sunday(7)</th>
+                </thead>
+                <tr class="todo">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- <div class="calendar">
+            <div class="header">
+                <div class="year-month"></div>
+                <div class="nav">
+                    <button class="nav-btn go-prev">&lt;</button>
+                    <button class="nav-btn go-today">Today</button>
+                    <button class="nav-btn go-next">&gt;</button>
+                </div>
+                </div>
+                <div class="main">
+                    <div class="days">
+                        <div class="day">일</div>
+                        <div class="day">월</div>
+                        <div class="day">화</div>
+                        <div class="day">수</div>
+                        <div class="day">목</div>
+                        <div class="day">금</div>
+                        <div class="day">토</div>
+                    </div>
+                    <div class="dates"></div>
+                </div>
+            </div> -->
+    <!-- <script src="m.js"></script> -->
+    <script src="weekly.js"></script>
+    <!-- <script src="w.js"></script> -->
 </body>
+
 </html>
